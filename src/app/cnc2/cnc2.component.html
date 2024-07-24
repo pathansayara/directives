@@ -1,0 +1,26 @@
+<p class="text-success">cnc2 works!</p>
+
+<Button (click)="getName()">Click Me</Button>
+<Button (click)="getNametwo('sara')">I am value</Button>
+
+<h2>CNC Web World</h2>
+<h3 *ngIf="true">Web World Technologies</h3>
+<h4 *ngIf="true">Welcome to programing world!</h4>
+
+
+<h2 *ngIf="name; else elseBlock">Else block</h2>
+
+<ng-template #elseBlock>
+    <h4>Name is hidden</h4>
+</ng-template>
+
+
+<h2 *ngIf="name; then thenBlock else elseBlock">Else block</h2>
+
+<ng-template #thenBlock>
+    <h4>Name is hidden</h4>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h4>Name is hidden</h4>
+</ng-template>

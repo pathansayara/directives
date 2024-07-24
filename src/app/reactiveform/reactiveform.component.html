@@ -1,0 +1,15 @@
+<!-- my-form.component.html -->
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" formControlName="firstName">
+  
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" formControlName="lastName">
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+  
+    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+  </form>
+  

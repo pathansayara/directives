@@ -1,0 +1,17 @@
+<!-- modal.component.html -->
+<div class="modal-overlay" *ngIf="isOpen">
+    <div class="modal">
+      <div class="modal-header">
+        <h2><ng-content select="[modal-title]"></ng-content></h2>
+        <button class="close" (click)="close()">×</button>
+      </div>
+      <div class="modal-body">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, dolor fuga? Sapiente, officiis assumenda ipsa suscipit dolorum unde esse ea quas cum iste itaque iusto impedit distinctio, repudiandae ex quis.</p>
+        <ng-content></ng-content> <!-- Main content goes here -->
+      </div>
+      <div class="modal-footer">
+        <button (click)="close()">Close</button>
+      </div>
+    </div>
+  </div>
+  
